@@ -4,9 +4,15 @@ API REST para gestionar libros.
 
 ## Cómo funciona
 
-La API se ha implementado con una pequeña aplicación en Go. 
+La API se ha implementado con una pequeña aplicación en Go.
 
-Si necesitas realizar cambios en la aplicación y quieres lanzarla directamente en tu máquina local necesitas instalar el intérprete de Go y después ejecutar: 
+Primero necesitas levantar la base de datos:
+
+`docker run --name mysql -e MYSQL_ROOT_PASSWORD=password -p 3306:3306 -d mysql:5.6`
+
+Y ejecutar las queries del archivo `schema.sql`
+
+Para lanzar la aplicación: 
 
 `make run`
 
